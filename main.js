@@ -21,8 +21,8 @@ function my_touchstart(e){
 }
 canvas.addEventListener("touchmove",my_touchmove);
 function my_touchmove(e){
-current_x=e.clientX-canvas.offsetLeft;
-current_y=e.clientY-canvas.offsetTop;
+current_x=e.touches[0].clientX-canvas.offsetLeft;
+current_y=e.touches[0].clientY-canvas.offsetTop;
     ctx.beginPath();
     ctx.strokeStyle=color;
     ctx.lineWidth=linewidth;
